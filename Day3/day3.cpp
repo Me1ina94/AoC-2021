@@ -31,7 +31,6 @@ std::vector<std::string> readFromFile()
     {
         while(!fin.eof())
         {
-            
             std::getline(fin, line, '\n');
 
             if(line == "")
@@ -54,9 +53,9 @@ std::vector<std::string> readFromFile()
 void puzzle_one()
 {
     std::vector<std::string> list = readFromFile();
-    int g_one = 0, g_two = 0, g_three = 0, g_four = 0, g_five = 0, 
-        g_six = 0, g_seven = 0, g_eight = 0, g_nine= 0, g_ten = 0, 
-        g_eleven = 0, g_twelve = 0;
+    int one = 0, two = 0, three = 0, four = 0, five = 0, 
+        six = 0, seven = 0, eight = 0, nine= 0, ten = 0, 
+        eleven = 0, twelve = 0;
     int count1;
 
     for(int num = 0; num < list.size(); num++)
@@ -65,56 +64,56 @@ void puzzle_one()
         ++count1;
         if(line[0] == '1')
         {
-            ++g_one;
+            ++one;
         }
         if(line[1] == '1')
         {
-            ++g_two;
+            ++two;
         }
         if(line[2] == '1')
         {
-            ++g_three;
+            ++three;
         }
         if(line[3] == '1')
         {
-            ++g_four;
+            ++four;
         }
         if(line[4] == '1')
         {
-            ++g_five;
+            ++five;
         }
         if(line[5] == '1')
         {
-            ++g_six;
+            ++six;
         }
         if(line[6] == '1')
         {
-            ++g_seven;
+            ++seven;
         }
         if(line[7] == '1')
         {
-            ++g_eight;
+            ++eight;
         }
         if(line[8] == '1')
         {
-            ++g_nine;
+            ++nine;
         }
         if(line[9] == '1')
         {
-            ++g_ten;
+            ++ten;
         }
         if(line[10] == '1')
         {
-            ++g_eleven;
+            ++eleven;
         }
         if(line[11] == '1')
         {
-            ++g_twelve;
+            ++twelve;
         }
         
     }
     std::string gamma = "", epsilon = "";
-    if(g_one > (count1 / 2))
+    if(one > (count1 / 2))
     {
         gamma += "1";
         epsilon += "0";
@@ -125,7 +124,7 @@ void puzzle_one()
         epsilon += "1";
     }
 
-    if(g_two > (count1 / 2))
+    if(two > (count1 / 2))
     {
         gamma += "1";
         epsilon += "0";
@@ -136,7 +135,7 @@ void puzzle_one()
         epsilon += "1";
     }
 
-    if(g_three > (count1 / 2))
+    if(three > (count1 / 2))
     {
         gamma += "1";
         epsilon += "0";
@@ -147,7 +146,7 @@ void puzzle_one()
         epsilon += "1";
     }
 
-    if(g_four > (count1 / 2))
+    if(four > (count1 / 2))
     {
         gamma += "1";
         epsilon += "0";
@@ -158,7 +157,7 @@ void puzzle_one()
         epsilon += "1";
     }
 
-    if(g_five > (count1 / 2))
+    if(five > (count1 / 2))
     {
         gamma += "1";
         epsilon += "0";
@@ -169,7 +168,7 @@ void puzzle_one()
         epsilon += "1";
     }
 
-    if(g_six > (count1 / 2))
+    if(six > (count1 / 2))
     {
         gamma += "1";
         epsilon += "0";
@@ -180,7 +179,7 @@ void puzzle_one()
         epsilon += "1";
     }
 
-    if(g_seven > (count1 / 2))
+    if(seven > (count1 / 2))
     {
         gamma += "1";
         epsilon += "0";
@@ -191,7 +190,7 @@ void puzzle_one()
         epsilon += "1";
     }
 
-    if(g_eight > (count1 / 2))
+    if(eight > (count1 / 2))
     {
         gamma += "1";
         epsilon += "0";
@@ -202,7 +201,7 @@ void puzzle_one()
         epsilon += "1";
     }
 
-    if(g_nine > (count1 / 2))
+    if(nine > (count1 / 2))
     {
         gamma += "1";
         epsilon += "0";
@@ -213,7 +212,7 @@ void puzzle_one()
         epsilon += "1";
     }
 
-    if(g_ten > (count1 / 2))
+    if(ten > (count1 / 2))
     {
         gamma += "1";
         epsilon += "0";
@@ -224,7 +223,7 @@ void puzzle_one()
         epsilon += "1";
     }
 
-    if(g_eleven > (count1 / 2))
+    if(eleven > (count1 / 2))
     {
         gamma += "1";
         epsilon += "0";
@@ -235,7 +234,7 @@ void puzzle_one()
         epsilon += "1";
     }
 
-    if(g_twelve > (count1 / 2))
+    if(twelve > (count1 / 2))
     {
         gamma += "1";
         epsilon += "0";
@@ -245,7 +244,7 @@ void puzzle_one()
         gamma += "0";
         epsilon += "1";
     }
-    std::cout << gamma << " " << epsilon << std::endl;
+    
     int gammaToInt = stoi(gamma, 0, 2);
     int epsilonToInt = stoi(epsilon, 0, 2);
     std::cout << gammaToInt << " " << epsilonToInt << std::endl;
